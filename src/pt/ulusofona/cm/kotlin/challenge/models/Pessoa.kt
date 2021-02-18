@@ -1,8 +1,9 @@
 package pt.ulusofona.cm.kotlin.challenge.models
 
-import pt.ulusofona.cm.kotlin.challenge.interfaces.Movimental
+import pt.ulusofona.cm.kotlin.challenge.interfaces.Movimentavel
+import java.util.*
 
-data class Pessoa(val nome:String, val dataDeNascimento:Date) : Movimental{
+data class Pessoa(val nome:String, val dataDeNascimento: Date) : Movimentavel{
 
     var posicao:Posicao = Posicao(0,0)
     var carta: Carta = Carta("")
@@ -23,6 +24,10 @@ data class Pessoa(val nome:String, val dataDeNascimento:Date) : Movimental{
         }else{
             //manda aquela cena
         }
+    }
+
+    fun pesquisarVeiculo(identificador: String){
+
     }
 
     fun moverVeiculoPara(identificador: String, x: Int, y: Int){
