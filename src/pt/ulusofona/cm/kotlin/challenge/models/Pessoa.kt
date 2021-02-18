@@ -31,7 +31,7 @@ data class Pessoa(val nome:String, val dataDeNascimento: Date) : Movimentavel{
     }
 
     fun moverVeiculoPara(identificador: String, x: Int, y: Int){
-
+        veiculos.find { it.identificador == identificador}?.moverPara(x,y)
     }
 
     fun temCarta(): Boolean{
